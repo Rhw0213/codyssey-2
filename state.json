@@ -1,0 +1,30 @@
+{
+    "quizzes" : [
+        {
+            "question" : "문제 1",
+            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
+            "answer" : 1
+        },
+        {
+            "question" : "문제 2",
+            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
+            "answer" : 1
+        },
+        {
+            "question" : "문제 3",
+            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
+            "answer" : 1
+        },
+        {
+            "question" : "문제 4",
+            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
+            "answer" : 1
+        },
+        {
+            "question" : "문제 5",
+            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
+            "answer" : 1
+        }
+    ],
+    "best_score" : 0
+}

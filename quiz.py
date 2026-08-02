@@ -1,8 +1,8 @@
 class Quiz:
-    def __init__(self, question):
-        self.question = question[0]
-        self.choices = question[1]
-        self.answer = question[2]
+    def __init__(self, quiz):
+        self.question = quiz["question"]
+        self.choices = quiz["choices"]
+        self.answer = quiz["answer"]
     
     def print(self):
         print(self.question)
