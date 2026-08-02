@@ -10,8 +10,13 @@ class Quiz:
             print(f"{num}. {choice}") 
     
     def solve(self, selectNum):
+        if(selectNum > len(self.choices) or selectNum < 0):
+            return -1;
+
         if(self.answer == selectNum):
             print("정답입니다.")
         else:
             print("오답입니다.")
+
+        return 1;
             
