@@ -12,7 +12,6 @@ def Game():
 
     #초기화
     quiz_objects = []
-    io = IO()
 
     for d in quizzes:
         quiz = Quiz(d)
