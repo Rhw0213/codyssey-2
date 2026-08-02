@@ -1,4 +1,5 @@
 from quiz import Quiz
+from IO import IO
 import json 
 
 def Game():
@@ -11,13 +12,15 @@ def Game():
 
     #초기화
     quiz_objects = []
+    io = IO()
 
     for d in quizzes:
         quiz = Quiz(d)
         quiz_objects.append(quiz)
 
+    io.print_title();
     #루프
-    while(quiz_index <= 4):
-        quiz = quiz_objects[quiz_index]
-        quiz_index += 1
-        quiz.print() 
+    #while quiz_index <= 4:
+    #    quiz = quiz_objects[quiz_index]
+    #    quiz_index += 1
+    #    quiz.print() 
