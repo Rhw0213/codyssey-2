@@ -1,5 +1,6 @@
 from quiz import Quiz
 from IO import IO
+from score import Score
 import json 
 import os
 
@@ -30,6 +31,7 @@ def solveQuiz(quiz_objects: list[Quiz], best_score: int, io : IO) -> None:
         quiz = quiz_objects[index]
 
         quiz.print()
+        print("선택 ", end="")
 
         if (quiz.solve(io.inputNum(4))):
             index += 1
