@@ -5,13 +5,13 @@ import json
 import os
 
 def Game():
-    io, quiz_objects, best_score = Init(readJson())
+    io, quiz_objects, score = Init(readJson())
 
     while True:
         num = io.print_title()
         match num: 
             case 1:
-                solveQuiz(quiz_objects, best_score, io)
+                solveQuiz(quiz_objects, score, io)
 
 
 def Init(data):
@@ -23,9 +23,9 @@ def Init(data):
         quiz = Quiz(d)
         quiz_objects.append(quiz)
 
-    return IO(), quiz_objects, best_score
+    return IO(), quiz_objects, Score(int(best_score)) 
 
-def solveQuiz(quiz_objects: list[Quiz], best_score: int, io : IO) -> None:
+def solveQuiz(quiz_objects: list[Quiz], score: Score, io : IO) -> None:
     index = 0
     while index < len(quiz_objects):
         quiz = quiz_objects[index]
@@ -34,9 +34,11 @@ def solveQuiz(quiz_objects: list[Quiz], best_score: int, io : IO) -> None:
         print("선택 ", end="")
 
         if (quiz.solve(io.inputNum(4))):
+            score.increaseScore()
             index += 1
 
         print("=======================================================")
+        print()
 
                    
 
