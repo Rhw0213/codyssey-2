@@ -1,25 +1,43 @@
 from quiz import Quiz
 from IO import IO
 import json 
+import os
 
 def Game():
-    with open("state.json", "r", encoding="utf-8") as file:
-        data = json.load(file)
+    io, quiz_objects, best_score = Init(readJson())
 
+    while True:
+        num = io.print_title()
+        match num: 
+            case 1:
+                solveQuiz(quiz_objects, best_score, io)
+
+
+def Init(data):
     quizzes = data["quizzes"]
     best_score = data["best_score"]
-    quiz_index = 0
-
-    #초기화
     quiz_objects = []
 
     for d in quizzes:
         quiz = Quiz(d)
         quiz_objects.append(quiz)
 
-    io.print_title();
-    #루프
-    #while quiz_index <= 4:
-    #    quiz = quiz_objects[quiz_index]
-    #    quiz_index += 1
-    #    quiz.print() 
+    return IO(), quiz_objects, best_score
+
+def solveQuiz(quiz_objects: list[Quiz], best_score: int, io : IO) -> None:
+    index = 0
+    while index < len(quiz_objects):
+        quiz = quiz_objects[index]
+
+        quiz.print()
+
+        if (quiz.solve(io.inputNum(4))):
+            index += 1
+
+        print("=======================================================")
+
+                   
+
+def readJson():
+    with open("state.json", "r", encoding="utf-8") as file:
+        return json.load(file)

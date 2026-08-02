@@ -9,14 +9,12 @@ class Quiz:
         for num, choice in enumerate(self.choices, start = 1):
             print(f"{num}. {choice}") 
     
-    def solve(self, selectNum):
-        if(selectNum > len(self.choices) or selectNum < 0):
-            return -1;
-
+    def solve(self, selectNum) -> bool:
         if(self.answer == selectNum):
             print("정답입니다.")
-        else:
-            print("오답입니다.")
+            return True
 
-        return 1;
+        print("오답입니다.")
+        return False
+
             

@@ -1,6 +1,9 @@
+import os
+
 class IO:
     def isValidNumber(self, enableRange : int, num : int) -> int:
         if (num < 0 or num > enableRange):
+            print("숫자 범위가 맞지 않습니다. 다시 고르세요.")
             return -1 
         return num 
 
@@ -13,7 +16,9 @@ class IO:
 
         return self.isValidNumber(enableRange, num) 
 
-    def print_title(self):
+    def print_title(self) -> int:
+        num = 0
+
         while True:
             print("========================================")
             print("        🎯 나만의 퀴즈 게임 🎯")
@@ -24,8 +29,10 @@ class IO:
             print("4. 점수 확인")
             print("5. 종료")
             print("========================================")
-            print("선택", end="")
+            print("선택 ", end="")
 
-            if (self.inputNum(5) != -1):
-                break;
+            num = self.inputNum(5)
+            if (num != -1):
+                os.system("cls" if os.name == "nt" else "clear")
+                return num;
 
