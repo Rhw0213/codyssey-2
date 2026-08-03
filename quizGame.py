@@ -4,6 +4,7 @@ from score import Score
 import json 
 import os
 import sys
+from randomQuiz import randomQuiz 
 
 def Game():
     data = readJson()
@@ -38,8 +39,13 @@ def Init(data):
 
 def solveQuiz(quiz_objects: list[Quiz], score: Score, io : IO) -> None:
     index = 0
-    while index < len(quiz_objects):
-        quiz = quiz_objects[index]
+
+    rnd = randomQuiz() 
+
+    shuffleQuizs = rnd.rand(quiz_objects)
+    
+    while index < len(shuffleQuizs):
+        quiz = shuffleQuizs[index]
 
         quiz.print()
         print("선택 ", end="")
