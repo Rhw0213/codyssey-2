@@ -20,14 +20,10 @@ Python 기본 문법과 객체 지향(클래스)을 사용해 하나의 완성�
 
 ## 2. 퀴즈 주제와 선정 이유
 
-> ⚠️ **작성 필요**: 아래 내용을 본인이 `state.json`에 넣은 주제에 맞게 수정하세요.
-
-**주제**: (예: 프로그래밍 기초 / 영화 / 게임 등)
+**주제**: (예: 프로그래밍 기초)
 
 **선정 이유**:
-- (예) 평소 관심 있는 분야라 문제와 선택지를 직접 만들기 수월했다.
-- (예) 정답이 명확하게 갈리는 4지선다 문제를 만들기 좋은 주제라고 판단했다.
-- (예) 나중에 문제를 계속 추가하면서 스스로 복습용으로도 쓸 수 있다.
+- 나중에 문제를 계속 추가하면서 스스로 복습용으로도 쓸 수 있다.
 
 기본 퀴즈는 5개 이상 포함되어 있으며, 실행 중 "퀴즈 추가" 기능으로 계속 늘려갈 수 있습니다.
 
@@ -45,8 +41,8 @@ python3 --version
 ### 실행
 
 ```bash
-git clone https://github.com/Rhw0213/<저장소명>.git
-cd <저장소명>
+git clone https://github.com/Rhw0213/codyssey-2.git
+cd codyssey-2
 python3 main.py
 ```
 
@@ -165,4 +161,28 @@ python3 main.py
 
 ```bash
 git log --oneline --graph
+
+C:\codyssey-2>git log --oneline --graph --all
+*   9e8445b (HEAD -> master, origin/master) Merge branch 'random'
+|\
+| * a2b32d5 (origin/random, random) branch 연습
+| * c3c9f2a branch 연습
+* | ed608ec Docs: 실행 화면 스크린샷 추가
+* | 6592b0a fix: 손코딩후 AI분석 픽스
+* | bca85f4 branch 연습
+|/
+* bd5347e feat:random 퀴즈 구현
+* aed46f8 fix:  최고 점수 관련, 정답 표시 fix
+* 010ad52 feat:showQuestions, addQuiz, checkHighScore 추가
+* d5df423 feat:문제 결과 기능 추가
+* c889a99 feat: score class 기능 추가
+* 006b281 feat: score class 추가
+* 7d5ddec feat: 1번 문제풀이 기능 추가 2
+* 78fa89a feat: 1번 문제풀이 기능 추가
+* 8e31c8c fix:IO fix
+* fa9602c feat: IO 기능 추가
+* b455f08 feat: quizGame class print 기능 추가
+* 6682ba7 fix: quiz class  fix
+* a340dc4 feat:quiz class 추가
+* 4506da2 Init: 파일 구성
 ```
