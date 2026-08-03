@@ -144,12 +144,10 @@ python3 main.py
 | 퀴즈 추가 | `docs/screenshots/add_quiz.png` |
 | 점수 확인 | `docs/screenshots/score.png` |
 
-```markdown
 ![메뉴](docs/screenshots/menu.png)
 ![퀴즈 풀기](docs/screenshots/play.png)
 ![퀴즈 추가](docs/screenshots/add_quiz.png)
 ![점수 확인](docs/screenshots/score.png)
-```
 
 ---
 
