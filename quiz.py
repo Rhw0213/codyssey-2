@@ -17,4 +17,14 @@ class Quiz:
         print("오답입니다.")
         return False
 
+    def to_dict(self) -> dict:
+        return {
+            "question": self.question,
+            "choices": self.choices,
+            "answer": self.answer
+        }
+
+    def printQuestion(self):
+        print(f"{self.question}")
+
             

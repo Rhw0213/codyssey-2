@@ -1,30 +1,55 @@
 {
-    "quizzes" : [
+    "quizzes": [
         {
-            "question" : "문제 1",
-            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
-            "answer" : 1
+            "question": "파이썬에서 화면에 문장이나 변수 값을 출력할 때 사용하는 함수는 무엇인가요?",
+            "choices": [
+                "input()",
+                "print()",
+                "output()",
+                "display()"
+            ],
+            "answer": 1
         },
         {
-            "question" : "문제 2",
-            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
-            "answer" : 1
+            "question": "다음 중 파이썬의 변수 이름으로 사용할 수 없는 것은 무엇인가요?",
+            "choices": [
+                "my_dog",
+                "apple123",
+                "2nd_place",
+                "_value"
+            ],
+            "answer": 3 
         },
         {
-            "question" : "문제 3",
-            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
-            "answer" : 1
+            "question": "파이썬에서 두 값이 같은지 비교할 때 사용하는 연산자는 무엇인가요?",
+            "choices": [
+                "=",
+                "==",
+                "!=",
+                "is"
+            ],
+            "answer": 2 
         },
         {
-            "question" : "문제 4",
-            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
-            "answer" : 1
+            "question": "리스트(List)의 맨 마지막에 새로운 항목을 추가할 때 사용하는 메서드는 무엇인가요?",
+            "choices": [
+                "add()",
+                "push()",
+                "append()",
+                "insert()"
+            ],
+            "answer": 1
         },
         {
-            "question" : "문제 5",
-            "choices" : ["정답 1", "정답 2", "정답 3", "정답 4"],
-            "answer" : 1
+            "question": "숫자를 나눈 후 '나머지'를 구하고 싶을 때 사용하는 연산자는 무엇인가요?",
+            "choices": [
+                "/",
+                "//",
+                "**",
+                "%"
+            ],
+            "answer": 4 
         }
     ],
-    "best_score" : 0
+    "best_score": 80
 }
