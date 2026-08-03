@@ -81,9 +81,10 @@ def addQuiz(quiz_objects: list[Quiz], io: IO) -> None:
     choices = []
 
     for num in range(1, 5):
-        choice = io.inputStr(f"선택지 {num}")
+        choice = io.inputStr(f"선택지 {num} ")
         choices.append(choice)
 
+    print("정답 : ", end = "")
     answer = io.inputNum(4)
 
     quiz_data = {

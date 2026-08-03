@@ -1,9 +1,6 @@
 class Score:
     def __init__(self, best_score : int):
-        #self.score = 0
         self.best_score = best_score
-        #self.solveQuiz = 0
-        #self.newRecord = False
         self.init()
 
     def increaseScore(self):

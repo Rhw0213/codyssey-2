@@ -55,5 +55,7 @@ class IO:
         return input(words).strip()
 
     def printHighScore(self, score : Score):
-        print(f"🏆 최고 점수: {score.getBestScore()}점 ({score.getSolveQuizCount() + 1}문제 중 {score.getSolveQuizCount()}문제 정답)")
+        bestScore = score.getBestScore()
+        quizCount = bestScore // 20
+        print(f"🏆 최고 점수: {bestScore}점 ({quizCount + 1}문제 중 {quizCount}문제 정답)")
 
