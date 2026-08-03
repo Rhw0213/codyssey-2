@@ -1,4 +1,5 @@
 import os
+from score import Score
 
 class IO:
     def isValidNumber(self, enableRange : int, num : int) -> int:
@@ -34,5 +35,15 @@ class IO:
             num = self.inputNum(5)
             if (num != -1):
                 os.system("cls" if os.name == "nt" else "clear")
-                return num;
+                return num
 
+    def printLine(self):
+        print("=========================================")
+
+
+    def printResult(self, score : Score):
+        self.printLine()
+        print(f"결과: {score.getSolveQuizCount() + 1}문제 중 {score.getSolveQuizCount()}문제 정답!({score.getScore()}점)")
+        if (score.findBestScore()):
+            print("새로운 최고 점수입니다!")
+        self.printLine()

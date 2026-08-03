@@ -36,11 +36,14 @@ def solveQuiz(quiz_objects: list[Quiz], score: Score, io : IO) -> None:
         if (quiz.solve(io.inputNum(4))):
             score.increaseScore()
             index += 1
-
-        print("=======================================================")
+        else:
+            io.printResult(score)
+            score.init()
+            break
+        
+        io.printLine()
         print()
 
-                   
 
 def readJson():
     with open("state.json", "r", encoding="utf-8") as file:
