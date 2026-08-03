@@ -1,8 +1,9 @@
-from quiz import Quiz
-from quizGame import Game 
+from quizGame import QuizGame
+
+
 def main():
-    Game()
+    QuizGame().run()
+
 
 if __name__ == "__main__":
-
     main()
